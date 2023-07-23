@@ -28,8 +28,7 @@ int main(int argc, char **argv)
 
 		if (nchars_read == -1)
 		{
-			printf("exit\n");
-			return (-1);
+			exit(EXIT_SUCCESS);
 		}
 
 		lineptr_copy = malloc(sizeof(char) * nchars_read);
