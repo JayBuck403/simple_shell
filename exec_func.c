@@ -10,12 +10,14 @@
 void exec_func(char **argv)
 {
 	char *command = NULL;
+	char *_command = NULL;
 
 	if (argv)
 	{
 		command = argv[0];
+		_command = get_location(command);
 
-		if (execve(command, argv, NULL) == -1)
+		if (execve(_command, argv, NULL) == -1)
 		{
 			perror("Error");
 		}
